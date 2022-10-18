@@ -46,8 +46,8 @@ public class NewsController {
 
 			List<News> theNews = newsService.list();
 
-			for (int i = 0; i < theNews.size(); i++) {
-				theNews.get(i).setNewsDate(convertDateToString(theNews.get(i)));
+			for (News news : theNews) {
+				news.setNewsDate(convertDateToString(news));
 			}
 
 			// add the news to the model
